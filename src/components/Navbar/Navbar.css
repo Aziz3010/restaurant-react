@@ -1,0 +1,154 @@
+.app__navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-black);
+    padding: 1rem 2rem;
+}
+
+.app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.app__navbar-logo img {
+    width: 150px;
+}
+
+.app__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.app__navbar-links li {
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.app__navbar-links li:hover {
+    color: var(--color-gray);
+}
+
+.app__navbar-login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.app__navbar-login a {
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: .5s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.app__navbar-login a:hover {
+    border-bottom: 1px solid var(--color-golden);
+}
+
+.app__navbar-login div {
+    width: 1px;
+    height: 30px;
+    background-color: var(--color-gray);
+}
+
+.app__navbar-login .app__navbar-login-icon {
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    display: none;
+}
+
+.app__navbar-login .app__navbar-login-icon :last-child {
+    margin: 0 1rem;
+    color: var(--color-white);
+    transition: color .5s;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.app__navbar-login :last-child:hover {
+    color: var(--color-golden);
+}
+
+.app__navbar-smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    transition: .5s ease;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close {
+    color: var(--color-golden);
+    font-size: 27px;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    transition: color .5s;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close:hover {
+    color: var(--color-white);
+}
+
+.app__navbar-smallscreen_links {
+    list-style: none;
+}
+
+.app__navbar-smallscreen_links li {
+    margin: 2rem;
+    cursor: pointer;
+    color: var(--color-golden);
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: var(--font-base);
+    transition: color .5s;
+}
+
+.app__navbar-smallscreen_links li:hover {
+    color: var(--color-white);
+}
+
+/* media */
+@media screen and (max-width: 991px) {
+    .app__navbar-links {
+        display: none;
+    }
+
+    .app__navbar-login .app__navbar-login-icon {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__navbar-logo img {
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .app__navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 313px) {
+    .app__navbar-login a {
+        margin: 0 .5rem;
+        border-bottom: 1px solid transparent;
+    }
+}
